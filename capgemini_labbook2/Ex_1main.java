@@ -12,10 +12,10 @@ public class Ex_1main {
 			Video v = new Video();
 			v.setDirector("Rajamouli");
 			v.setGenre("Melody");
-			v.setNumber_of_copies(9);
-			v.setRuntime(5);
+			v.setNumber_of_Copies(9);
+			v.setRunTime(5);
 			v.setTitle("sye");
-			v.setUniqueIdentificationnumber(10);
+			v.setuniqueidentificationnumber(10);
 			System.out.println(v.toString());
 			break;
 

@@ -36,23 +36,31 @@ class Employee implements Comparable<Employee> {
 	}
 }
 
-public class Test_comparable {
+class Namecomparator implements Comparator<Employee> {
+	@Override
+	public int compare(Employee e1, Employee e2) {
+		if (e1.getName().equals(e2.getName())) {
+			return 0;
+		} else {
+			return 1;
+		}
+	}
+}
 
+public class Test_comparable {
 	public static void main(String[] args) {
 		Employee e1, e2, e3;
 		e1 = new Employee(101, "Pavan");
 		e2 = new Employee(102, "Suresh");
 		e3 = new Employee(103, "Varun");
-
 		Employee es[] = { e1, e3, e2 };
 		Arrays.sort(es);
 		System.out.println("Array sorted via Arrays.sort:" + Arrays.toString(es));
-
 		List<Employee> list = new ArrayList<Employee>();
 		list.add(e1);
 		list.add(e2);
 		list.add(e3);
-		Collection.sort(list.newNamecomparator());
+		Collection.sort(list.new Namecomparator());
 		System.out.println("size");
 	}
 }

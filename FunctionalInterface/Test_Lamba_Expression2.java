@@ -17,8 +17,11 @@ public class Test_Lamba_Expression2 {
 	Calculate calc2=(num1,num2) ->  {
 	return num1+num2;
 	};
+	{
 	System.out.println("Addition:"+calc2.add(10,20));
-	
-
+	}
+	};
 }
+
+
 

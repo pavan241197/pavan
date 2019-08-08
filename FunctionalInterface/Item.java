@@ -37,9 +37,7 @@ public class Item {
 	
 	@Override
 	public String toString() {
-		return "Item [itemId=" + itemId + ", name=" + name + ", cost=" + cost + ", getItemId()=" + getItemId()
-				+ ", getName()=" + getName() + ", getCost()=" + getCost() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "Item [itemId=" + itemId + ", name=" + name + ", cost=" + cost + "]";
 	}
 
 	@Override

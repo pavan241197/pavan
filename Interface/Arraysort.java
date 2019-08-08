@@ -4,8 +4,7 @@ import java.util.Arrays;
 
 public interface Arraysort {
 	void sortAsc();
-
-	void sortdes();
+	void sortDes();
 }
 
 class ArraySortImpl implements Arraysort {
@@ -56,9 +55,5 @@ class ArraySortImpl implements Arraysort {
 		}
 	}
 
-	@Override
-	public void sortdes() {
-		// TODO Auto-generated method stub
-
-	}
+	
 }

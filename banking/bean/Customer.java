@@ -4,7 +4,9 @@ public class Customer {
 	public String name;
 	public String mobileno;
 	public String address, pincode;
+	public String EmailId;
 
+	
 	public String getAddress() {
 		return address;
 	}
@@ -35,12 +37,26 @@ public class Customer {
 
 	public void setPincode(String pincode) {
 		this.pincode = pincode;
+		
 	}
+	public String getEmailId() {
+		return EmailId;
+	}
+
+	public void setEmailId(String emailId) {
+		EmailId = emailId;
+	}
+
 
 	@Override
 	public String toString() {
 		return "Customer [name=" + name + ", mobileno=" + mobileno + ", address=" + address + ", pincode=" + pincode
 				+ "]";
 	}
+
+	
+		
+		
+	
 
 }

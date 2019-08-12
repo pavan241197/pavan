@@ -1,56 +1,42 @@
 package com.capgemini.banking.bean;
 
 public class Account {
-	private int current;
-	private int savings;
-	private int accounttype = savings / current;
-	private int accountnumber;
+	
+	private String accounttype;
+	static int accountnumber = 100;
 	private Customer customer;
-	private int initialbalance = 0;
-
-	public Account(int current, int savings, int accounttype, int accountnumber, Customer customer, int initialbalance) {
-		super();
-		this.current = current;
-		this.savings = savings;
-		this.accounttype = accounttype;
-		this.accountnumber = accountnumber;
-		this.customer = customer;
-		this.initialbalance = initialbalance;
-	}
+	private double initialbalance = 0;
 
 	public Account() {
 		super();
-	}
-	public int getCurrent() {
-		return current;
+		
+		setAccountnumber(accountnumber);
+		setAccounttype(accounttype);
+		setCustomer(customer);
+		setInitialbalance(initialbalance);
+
 	}
 
-	public void setCurrent(int current) {
-		this.current = current;
-	}
+	
 
-	public int getSavings() {
-		return savings;
-	}
-
-	public void setSavings(int savings) {
-		this.savings = savings;
-	}
-
-	public int getAccounttype() {
+	public String getAccounttype() {
 		return accounttype;
 	}
 
-	public void setAccounttype(int accounttype) {
+	
+
+	public void setAccounttype(String accounttype) {
 		this.accounttype = accounttype;
 	}
 
-	public int getAccountnumber() {
-		return accountnumber;
+
+
+	public static int getAccountnumber() {
+		return accountnumber++;
 	}
 
-	public void setAccountnumber(int accountnumber) {
-		this.accountnumber = accountnumber;
+	public static void setAccountnumber(int accountnumber) {
+		Account.accountnumber = accountnumber;
 	}
 
 	public Customer getCustomer() {
@@ -61,19 +47,31 @@ public class Account {
 		this.customer = customer;
 	}
 
-	public int getInitialbalance() {
+	public double getInitialbalance() {
 		return initialbalance;
 	}
 
-	public void setInitialbalance(int initialbalance) {
+	public void setInitialbalance(double initialbalance) {
 		this.initialbalance = initialbalance;
 	}
+
+
+
 	@Override
 	public String toString() {
-		return "Account [current=" + current + ", savings=" + savings + ", accounttype=" + accounttype
-				+ ", accountnumber=" + accountnumber + ", customer=" + customer + ", initialbalance=" + initialbalance
+		return "Account [accounttype=" + accounttype + ", customer=" + customer + ", initialbalance=" + initialbalance
 				+ "]";
 	}
 
+
+
+	
+
+
+
+
+
+
+	
 
 }

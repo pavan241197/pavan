@@ -8,7 +8,7 @@ interface BankingService {
 
 	void Depositmoney(double amount, Integer accno);
 
-	void Checkbalance(double amount, Integer accno);
+	void Checkbalance(Integer accno);
 
 	void Fundstransfer(Integer accno1, Integer accno2);
 
